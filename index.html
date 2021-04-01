@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="custom-div-form">
+        <form id="form" action="http://freemind-test.netlify.app/.netlify/functions/test" method="POST" onsubmit="return false">
+            <div class="frontpager"><h1>THÔNG TIN CÁ NHÂN</h1></div><hr>
+            <div class = "name form-group">
+                <label>Họ và tên (*)</label>
+                <input class="form-control" id = "name" name="name" type="text" placeholder="Ví dụ: Nguyễn Văn A" style="width:100%" required>
+            </div>
+            <div class = "numberPhone form-group">
+                <label for="numberPhone">Số điện thoại (*)</label>
+                <input class="form-control" type="text" name="phone" id="phone" placeholder="Số điện thoại liên lạc" pattern="(\+84|0)\d{9,11}" minlength="10" maxlength="12" style="width:100%" required>
+            </div>
+            <div class ="photo form-group">
+                <label for="photo">Hình ảnh (*)</label>
+                <input type="file" name="photo" id="photo" accept="image/*" style="width:100%" required>
+            </div>
+            <div class="Email form-group">
+                <label for="Email">Email (*)</label>
+                <input class="form-control" type="email" name="email" id="email" placeholder="Ex: example@gmail.com" style="width:100%" required>
+            </div>
+            <div class="form-group">
+                <div class="button">
+                    <button class="btn btn-primary" id="submit" type="submit" style="width:100%;padding:13px">Submit</button>
+                </div>
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+    <div class="hienthi">
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
